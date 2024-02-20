@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>{{trek.trek_name}}</h1>
+    <h2>Would you like to buy {{trek.trek_name}}</h2>
+    
+    <form action="{{url_for('payment')}}" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key={{public_key}}
+        data-amount="1999"
+        data-name="{{trek.trek_name}}"
+        data-description="Buy trek"
+        data-image="https://images.unsplash.com/photo-1514984879728-be0aff75a6e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=35dcb9bb6f3e097541dd732a99c44766&auto=format&fit=crop&w=1576&q=80"
+        data-locale="auto"
+        data-zip-code="true">
+      </script>
+    </form>
+  
+  </div>
+
+
+{% endblock %}

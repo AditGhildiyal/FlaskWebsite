@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+{% if current_user.is_authenticated %}
+    <p style="text-align: center;  margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;font-size:35px;color: #5f061a;">Hi {{current_user.username}}!</p>
+    <main>
+
+        {% for trek in treks %}
+        <div class="trek-card">
+            
+            <a href="{{url_for('trek_details',id=trek.id)}}"><h2>{{trek.trek_name}}</h2></a>
+            <p>{{trek.trek_title}}</p>
+            <p>Duration: 5 days</p>
+            <p>Difficulty: {{trek.trek_difficulty}}</p>
+            <a href="{{url_for('pre_payment',id=trek.id)}}" style="font-size:15px;color: #9ebb1b;" >BUY Trek!</a>
+            
+        </div>
+        {% endfor %}
+    
+    
+    </main>
+{% else %}
+        <p style="text-align: center;  margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;font-size:40px;color: #290404;">Please register first or if you are already registered click on Login!</p>
+{% endif %}
+
+{%endblock%}

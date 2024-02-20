@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<form method="POST" style="text-align: center;  margin-top: 50px;
+margin-bottom: 50px;
+margin-left: 50px;
+margin-right: 50px;font-size:15px;color: #290404;">
+    {{form.hidden_tag()}} <br>
+    {{form.email.label}}<br>{{form.email()}} <br>
+    {{form.username.label}}<br>{{form.username()}} <br>
+    {{form.password.label}}<br>{{form.password()}} <br>
+    {{form.pass_confirm.label}}<br>{{form.pass_confirm()}} <br>
+    {{form.submit()}}
+</form>
+
+{% endblock %}

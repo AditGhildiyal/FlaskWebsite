@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<style type="text/css">
+
+    textarea {
+    width: 250px;
+    height: 7em;
+    }
+    
+    input, select, textarea {
+    color: red;
+    }
+    #example {
+    color: #0000ff;
+    }
+    
+    </style>
+
+<form method="POST">
+    {{form.hidden_tag()}} <br>
+    {{form.trek_name.label}}<br>{{form.trek_name()}} <br>
+    {{form.trek_title.label}}<br>{{form.trek_title()}} <br>
+    {{form.trek_description.label}}<br>{{form.trek_description()}} <br>
+    {{form.trek_difficulty.label}}<br>{{form.trek_difficulty()}} <br>
+    {{form.submit()}}
+</form>
+
+{%endblock%}
