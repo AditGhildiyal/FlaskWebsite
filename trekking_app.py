@@ -26,7 +26,7 @@ app = Flask(__name__)
 
 public_key = 'pk_test_51OlWNiSB8AIPs1Ah1nPeObdMH39VNBLJSUelYrMrwvbNrzZvw1skECddq6I9ppjk7KHb0gatqSiISBytD7I2waNp00g5HdSjnZ'
 
-api_key = 'sk_test_51OlWNiSB8AIPs1AhhhFyOkZT8EZEJscO0tI9mQwrPUS1O2nfPGS7eYiknEgDuqHhK1GclHl4OwgeSBoJf2JoLwXR00pnLlvagB'
+api_key = '*************************'
 
 
 
